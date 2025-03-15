@@ -1,0 +1,27 @@
+.wrap {
+  position: fixed;
+  top: 0;
+  height: 64px;
+  width: 100%;
+  background: "";
+  z-index: 10;
+  padding: 0 12px;
+  white-space: nowrap;
+  overflow-x: scroll;
+  background-color: white;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.button {
+  height: 64px;
+  padding: 10px;
+  background: none;
+  border: none;
+  width: 150px;
+  &.active {
+    border-bottom: 2px solid black;
+  }
+}
