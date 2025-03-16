@@ -33,6 +33,13 @@ export function useScroll({
     const scrollPosition = window.scrollY + navHeight;
     let newIndex = index;
 
+    if (newIndex === 0 && scrollPosition < sectionPositions.current[newIndex]) {
+      onChange("none");
+    }
+
+    if (newIndex === 0 && scrollPosition > sectionPositions.current[newIndex]) {
+      onChange(sections[newIndex].id);
+    }
     // 다음 섹션으로 이동 (다음 섹션의 top 위치보다 아래로 스크롤됐을 때)
     if (
       newIndex < sections.length - 1 &&
