@@ -9,7 +9,6 @@
   white-space: nowrap;
   overflow-x: scroll;
   background-color: white;
-
   &::-webkit-scrollbar {
     display: none;
   }
@@ -21,7 +20,41 @@
   background: none;
   border: none;
   width: 150px;
+  color: gray;
   &.active {
-    border-bottom: 2px solid black;
+    // border-bottom: 2px solid black;
+    color: black;
+  }
+}
+
+.border {
+  position: absolute;
+  height: 2px;
+  width: 150px;
+  background: #000;
+  bottom: 0;
+  z-index: 10;
+  transition: 0.5s;
+  opacity: 0;
+
+  &.active_tab0 {
+    left: 0;
+    opacity: 1;
+  }
+  &.active_tab1 {
+    left: 162px;
+    opacity: 1;
+  }
+  &.active_tab2 {
+    left: 312px;
+    opacity: 1;
+  }
+  &.active_tab3 {
+    left: 462px;
+    opacity: 1;
+  }
+  &.active_tab4 {
+    left: 612px;
+    opacity: 1;
   }
 }

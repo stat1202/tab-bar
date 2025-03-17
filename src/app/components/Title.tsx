@@ -1,14 +1,12 @@
 "use client";
-import React, { forwardRef, Ref } from "react";
+import React from "react";
 
 type Props = {
   index: number;
 };
 
-const Title = forwardRef(({ index }: Props, ref: Ref<HTMLHeadingElement>) => {
-  return <h2 ref={ref}>Title {index}</h2>;
-});
-
-Title.displayName = "Title";
+const Title = ({ index }: Props) => {
+  return <h2>Title {index}</h2>;
+};
 
 export default Title;
